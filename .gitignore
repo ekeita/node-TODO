@@ -1,0 +1,7 @@
+node_modules/
+*.js~
+*.swp
+.gitignore~
+mongotest.js
+mongotest-re.js
+package-lock.json
