@@ -7,6 +7,7 @@ const {ObjectID} = require('mongodb');
 const {mongoose} = require('./db/mongoose');
 const {TODO} = require('./db/todos');
 const {USER} = require('./db/users');
+const port = process.env.PORT || 3000;
 
 app.use(bp.json());
 
@@ -94,4 +95,4 @@ app.patch('/todos/:id', (req, res) => {
     }).catch((err) => res.status(400).send(err.message))
 });
 
-app.listen(3000, () => console.log('Server started'));
+app.listen(port, () => console.log('Server started'));
